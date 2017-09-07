@@ -1,4 +1,4 @@
-# ESP-IDF OTA server component 
+# ESP-IDF OTA server component
 
 A component for ESP-IDF that adds OTA capability for your project easily.
 
@@ -11,14 +11,14 @@ This repository is served as a "component" for ESP-IDF project so you can add OT
 ```sh
 $ cd path/to/your/esp-idf-project
 $ git remote add esp32-ota-server git@github.com/yanbe/esp32-ota-server
-$ git subtree add --prefix components/ota-server esp32-ota-server master --squash
+$ git subtree add --prefix components/ota_server esp32-ota-server master --squash
 $ make menuconfig
 ```
 
 In `make menuconfig`,
 
 * In Partition Table: select "Factory app, two OTA definitions"
-* In Wifi Configuration section: set your Wifi access point SSID / password.
+* In Wifi Configuration section: set your Wifi access point's SSID / password.
 
 ### Integrate OTA capability to your project
 
@@ -100,10 +100,13 @@ $ make ota ESP32_IP=192.168.10.10
 Success. Next boot partition is ota_0
 ```
 
-### Update OTA server component
+### Modifing and Updating OTA server component
 
-If any changes have made to https://github.com/yanbe/esp32-ota-server ,
-you can merge its changes into your project by following command.
+As `components/ota_server` is introduced as via `git subtree` command, your can modify `components/ota_server`
+and commit it as your project's seamlessly,
+
+If you want to merge any changes have made to https://github.com/yanbe/esp32-ota-server ,
+you can merge them into your project by following command.
 ```
 $ git pull -s subtree --squash esp32-ota-server master
 ```
