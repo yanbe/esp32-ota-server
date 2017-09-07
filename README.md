@@ -10,7 +10,7 @@ This repository is served as a "component" for ESP-IDF project so you can add OT
 
 ```sh
 $ cd path/to/your/esp-idf-project
-$ git remote add esp32-ota-server git@github.com/yanbe/esp32-ota-server
+$ git remote add esp32-ota-server https://github.com/yanbe/esp32-ota-server.git
 $ git subtree add --prefix components/ota_server esp32-ota-server master --squash
 $ make menuconfig
 ```
