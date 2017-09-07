@@ -18,7 +18,7 @@ $ make menuconfig
 In `make menuconfig`,
 
 * In Partition Table: select "Factory app, two OTA definitions"
-* In Wifi Configuration section: set your Wifi access point's SSID / password.
+* In Wifi Configuration section: set your Wifi access point's SSID / password
 
 ### Integrate OTA capability to your project
 
