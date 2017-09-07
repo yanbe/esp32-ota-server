@@ -27,8 +27,7 @@ You have to add small portion of code to integrate OTA capability to your projec
 In your main/main.c,
 
 ```c
-
-include "ota_server.h"
+#include "ota_server.h"
 
 static EventGroupHandle_t wifi_event_group;
 
