@@ -108,5 +108,5 @@ and commit it as your project's seamlessly,
 If you want to merge any changes have made to https://github.com/yanbe/esp32-ota-server ,
 you can merge them into your project by following command.
 ```
-$ git pull -s subtree --squash esp32-ota-server master
+$ git pull -s subtree --squash --allow-unrelated-histories esp32-ota-server master
 ```
