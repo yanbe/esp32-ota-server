@@ -40,18 +40,11 @@ static const int CONNECTED_BIT = BIT0;
 static esp_err_t event_handler(void *ctx, system_event_t *event)
 {
     switch(event->event_id) {
-    case SYSTEM_EVENT_STA_START:
-        esp_wifi_connect();
-        break;
+    /* ... */
     case SYSTEM_EVENT_STA_GOT_IP:
         xEventGroupSetBits(wifi_event_group, CONNECTED_BIT);
         break;
-    case SYSTEM_EVENT_STA_DISCONNECTED:
-        esp_wifi_connect();
-        xEventGroupClearBits(wifi_event_group, CONNECTED_BIT);
-        break;
-    default:
-        break;
+    /* ... */
     }
     return ESP_OK;
 }
@@ -71,7 +64,7 @@ static void ota_server_task(void * param)
 
 
 void app_main() {
-    initializs_wifi();
+    initialise_wifi();
     xTaskCreate(&ota_server_task, "ota_server_task", 4096, NULL, 5, NULL);
 }
 
